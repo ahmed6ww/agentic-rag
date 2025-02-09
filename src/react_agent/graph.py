@@ -116,8 +116,8 @@ builder.add_edge("tools", "call_model")
 
 # Compile the builder into an executable graph
 # You can customize this by adding interrupt points for state updates
-graph = builder.compile(
+react_graph = builder.compile(
     interrupt_before=[],  # Add node names here to update state before they're called
     interrupt_after=[],  # Add node names here to update state after they're called
 )
-graph.name = "ReAct Agent"  # This customizes the name in LangSmith
+react_graph.name = "ReAct Agent"  # This customizes the name in LangSmith
